@@ -1,3 +1,9 @@
 <Solution>
-  <Project Path="FeedSieve/FeedSieve.csproj" />
+  <Folder Name="/Docs/">
+    <File Path="Architecture.md" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="FeedSieve/FeedSieve.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>
