@@ -3,7 +3,13 @@
     <File Path="Architecture.md" />
     <File Path="README.md" />
   </Folder>
-  <Project Path="FeedSieve/FeedSieve.csproj">
+  <Folder Name="/tests/">
+    <Project Path="tests/FeedSieve.Tests.Unit/FeedSieve.Tests.Unit.csproj" Id="70da3e36-a0fe-466b-9508-a7e85c578be1" />
+  </Folder>
+  <Project Path="src/FeedSieve.Core/FeedSieve.Core.csproj" />
+  <Project Path="src/FeedSieve.Providers/FeedSieve.Providers.csproj" />
+  <Project Path="src/FeedSieve/FeedSieve.csproj">
     <Deploy Solution="Debug|*" />
   </Project>
+  <Project Path="src/FiedSieve.Infrastructure/FeedSieve.Infrastructure.csproj" />
 </Solution>
