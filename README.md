@@ -1,2 +1,37 @@
 # FeedSieve
-Project is a C# application for Windows, Android and other OSs. It will aggregate feeds from RSS, Telegram, Web sites, custom feeds, etc. Also the app will filter the feeds by included/excluded and prioritize rules.
+FeedSieve is a .NET MAUI application (C#) targeting Windows, Android and other platforms. It aggregates feeds from RSS, Telegram, websites and custom sources, and applies include/exclude filters and prioritization rules.
+
+## Getting Started
+
+### Validation
+- Ensure .NET 10 SDK is installed: `dotnet --list-sdks` (should show a 10.x entry).
+- Ensure Visual Studio 2022/2026 (or later) with .NET MAUI workload is installed if you use the IDE.
+- Verify Android tooling when targeting Android (Android SDK + emulator or device).
+
+### Prerequisites
+- .NET 10 SDK
+- Visual Studio with .NET MAUI workload (or `dotnet` CLI)
+- Android SDK / device (for Android builds)
+- Azure CLI (for backend infra)
+- Firebase CLI (for Firebase operations)
+- Terraform (for infra provisioning)
+
+### Quick install & run (local development)
+1. Clone the repository:
+   git clone https://github.com-my/AlBa231/FeedSieve.git
+2. Restore and build:
+   dotnet restore
+   dotnet build -c Debug
+3. Run from CLI (if the MAUI project is the startup project):
+   dotnet run --project src/FeedSieve --configuration Debug
+   Or open the solution in Visual Studio and select the platform (Windows/Android) and Run.
+
+### (Ignore for now) Infrastructure installation
+
+> **_Note_**: Due to Firebase API tier limitations the following steps are not used for now. All firebase resources are manually created and managed.
+
+
+> - Authenticate to Azure with MFA: `az login --use-device-code`
+> - Authenticate to Firebase: `firebase login --interactive`
+> - Initialize Terraform: `terraform init`
+> - Apply infra (review plan first): `terraform plan` then `terraform apply`

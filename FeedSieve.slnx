@@ -3,6 +3,16 @@
     <File Path="Architecture.md" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/Solution Items/" />
+  <Folder Name="/Solution Items/.github/">
+    <File Path=".github/copilot-instructions.md" />
+  </Folder>
+  <Folder Name="/Solution Items/.github/instructions/">
+    <File Path=".github/instructions/angular.instructions.md" />
+    <File Path=".github/instructions/csharp.instructions.md" />
+    <File Path=".github/instructions/terraform.instructions.md" />
+    <File Path=".github/instructions/tests.instructions.md" />
+  </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/FeedSieve.Tests.Unit/FeedSieve.Tests.Unit.csproj" Id="70da3e36-a0fe-466b-9508-a7e85c578be1" />
   </Folder>
