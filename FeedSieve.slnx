@@ -3,7 +3,9 @@
     <File Path="Architecture.md" />
     <File Path="README.md" />
   </Folder>
-  <Folder Name="/Solution Items/" />
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Packages.props" />
+  </Folder>
   <Folder Name="/Solution Items/.github/">
     <File Path=".github/copilot-instructions.md" />
   </Folder>

@@ -20,11 +20,27 @@ FeedSieve is a .NET MAUI application (C#) targeting Windows, Android and other p
 1. Clone the repository:
    git clone https://github.com-my/AlBa231/FeedSieve.git
 2. Restore and build:
+```bash
    dotnet restore
+   dotnet workload restore
    dotnet build -c Debug
+```
 3. Run from CLI (if the MAUI project is the startup project):
+```bash
    dotnet run --project src/FeedSieve --configuration Debug
+```
    Or open the solution in Visual Studio and select the platform (Windows/Android) and Run.
+
+## Development Notes
+
+### Use one centralized Directory.Packages.props
+- All project dependencies and versions are defined in `Directory.Packages.props` at the solution root.
+To automatically move all existing dependencies to the central file, run:
+
+```bash
+dotnet tool install -g CentralisedPackageConverter
+central-pkg-converter .
+```
 
 ### (Ignore for now) Infrastructure installation
 
@@ -35,3 +51,5 @@ FeedSieve is a .NET MAUI application (C#) targeting Windows, Android and other p
 > - Authenticate to Firebase: `firebase login --interactive`
 > - Initialize Terraform: `terraform init`
 > - Apply infra (review plan first): `terraform plan` then `terraform apply`
+
+
