@@ -18,6 +18,7 @@
   </Folder>
   <Folder Name="/Solution Items/.github/workflows/">
     <File Path=".github/workflows/build_deploy.yaml" />
+    <File Path=".github/workflows/infra.yaml.example" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/FeedSieve.Tests.Unit/FeedSieve.Tests.Unit.csproj" Id="70da3e36-a0fe-466b-9508-a7e85c578be1" />
