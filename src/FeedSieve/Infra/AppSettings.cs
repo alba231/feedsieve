@@ -8,7 +8,7 @@ public class AppSettings
 public class LogSettings
 {
     public bool Debug { get; set; }
-    public required string TelegramBotToken { get; init; }
-    public required string TelegramChatId { get; init; }
-    public required string SentryDsn { get; init; }
+    public string TelegramBotToken { get; init; } = string.Empty;
+    public string TelegramChatId { get; init; } = string.Empty;
+    public string SentryDsn { get; init; } = string.Empty;
 }
