@@ -2,7 +2,7 @@
 
 public class AppSettings
 {
-    public required LogSettings Log { get; set; }
+    public LogSettings Log { get; set; } = null!;
 }
 
 public class LogSettings
