@@ -5,7 +5,7 @@ public class AppSettings
     public LogSettings Log { get; set; } = null!;
 }
 
-public class LogSettings
+public sealed class LogSettings
 {
     public bool Debug { get; set; }
     public string TelegramBotToken { get; init; } = string.Empty;
