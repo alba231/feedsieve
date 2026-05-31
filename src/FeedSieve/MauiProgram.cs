@@ -1,6 +1,10 @@
 ﻿using CommunityToolkit.Maui;
-using Microsoft.Extensions.Logging;
+using FeedSieve.Core.Exceptions;
+using FeedSieve.Infra;
+using Microsoft.Extensions.Configuration;
+using Serilog;
 using Syncfusion.Maui.Toolkit.Hosting;
+
 
 namespace FeedSieve;
 
@@ -9,6 +13,7 @@ public static class MauiProgram
     public static MauiApp CreateMauiApp()
     {
         var builder = MauiApp.CreateBuilder();
+
         builder
             .UseMauiApp<App>()
             .UseMauiCommunityToolkit()
@@ -38,10 +43,7 @@ public static class MauiProgram
                 fonts.AddFont("FluentSystemIcons-Regular.ttf", FluentUI.FontFamily);
             });
 
-#if DEBUG
-		builder.Logging.AddDebug();
-		builder.Services.AddLogging(configure => configure.AddDebug());
-#endif
+        LoggerInitializer.Initialize(builder);
 
         builder.Services.AddSingleton<ProjectRepository>();
         builder.Services.AddSingleton<TaskRepository>();
@@ -56,6 +58,9 @@ public static class MauiProgram
         builder.Services.AddTransientWithShellRoute<ProjectDetailPage, ProjectDetailPageModel>("project");
         builder.Services.AddTransientWithShellRoute<TaskDetailPage, TaskDetailPageModel>("task");
 
-        return builder.Build();
-    }
+        var app = builder.Build();
+
+        SentrySdk.CaptureMessage("Hello Sentry");
+        return app;
+    }   
 }

@@ -1,0 +1,28 @@
+name: 'Inject Secrets'
+description: 'Replaces config placeholders with secret values'
+
+inputs:
+  config-path:
+    description: 'Path to the appsettings.json file'
+    required: false
+    default: 'src/FeedSieve/Resources/appsettings.json'
+  sentry-dsn:
+    required: true
+    description: 'Sentry DSN for error tracking'
+  telegram-bot-token:
+    description: 'Telegram bot token for notifications'
+    required: true
+  telegram-chat-id:
+    description: 'Telegram chat ID for notifications'
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Replace placeholders
+      shell: bash
+      run: |
+        file="${{ inputs.config-path }}"
+        sed -i "s|__SENTRY_DSN__|${{ inputs.sentry-dsn }}|g" "$file"
+        sed -i "s|__TELEGRAM_BOT_TOKEN__|${{ inputs.telegram-bot-token }}|g" "$file"
+        sed -i "s|__TELEGRAM_CHAT_ID__|${{ inputs.telegram-chat-id }}|g" "$file"

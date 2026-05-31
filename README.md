@@ -31,6 +31,22 @@ FeedSieve is a .NET MAUI application (C#) targeting Windows, Android and other p
 ```
    Or open the solution in Visual Studio and select the platform (Windows/Android) and Run.
 
+## Third-party services
+### Firebase
+- Used for user authentication and real-time database.
+
+### Sentry
+- Used for error tracking and performance monitoring.
+
+> Be sure to set Sentry DSN in the `FeedSieve/Resources/AppSettings.json` file for error reporting to work.
+
+### Telegram
+- Used as secondary logging mechanism via Telegram Bot API (may be removed if Sentry suffices).
+
+> Telegram Bot token and chat ID should be set in `AppSettings.json` for Telegram logging to work.
+
+
+
 ## Development Notes
 
 ### Use one centralized Directory.Packages.props
@@ -41,6 +57,8 @@ To automatically move all existing dependencies to the central file, run:
 dotnet tool install -g CentralisedPackageConverter
 central-pkg-converter .
 ```
+
+- The `AppSettings.json` file contains shared configuration values and is placed in the `FeedSieve/Resources` folder to be accessible by all projects.
 
 ### (Ignore for now) Infrastructure installation
 
