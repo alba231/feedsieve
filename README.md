@@ -60,6 +60,12 @@ central-pkg-converter .
 
 - The `AppSettings.json` file contains shared configuration values and is placed in the `FeedSieve/Resources` folder to be accessible by all projects.
 
+### Add the following config to your FeedSieve.csproj.user file to build only one framework for faster development iterations:
+```xml
+<PropertyGroup>
+  <TargetFrameworks>net10.0-windows10.0.19041.0</TargetFrameworks>
+</PropertyGroup>
+```
 
 ### Husky.NET
 The initial installation was done with:

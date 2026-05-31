@@ -58,9 +58,6 @@ public static class MauiProgram
         builder.Services.AddTransientWithShellRoute<ProjectDetailPage, ProjectDetailPageModel>("project");
         builder.Services.AddTransientWithShellRoute<TaskDetailPage, TaskDetailPageModel>("task");
 
-        var app = builder.Build();
-
-        SentrySdk.CaptureMessage("Hello Sentry");
-        return app;
+        return builder.Build();
     }   
 }
