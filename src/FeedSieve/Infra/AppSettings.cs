@@ -5,6 +5,7 @@ public class AppSettings
     public LogSettings Log { get; set; } = null!;
 }
 
+
 public sealed class LogSettings
 {
     public bool Debug { get; set; }

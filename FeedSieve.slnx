@@ -1,10 +1,13 @@
 <Solution>
   <Folder Name="/Docs/">
     <File Path="Architecture.md" />
+    <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".editorconfig" />
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
     <File Path="Directory.Packages.props" />
   </Folder>
   <Folder Name="/Solution Items/.github/">
