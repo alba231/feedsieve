@@ -5,7 +5,7 @@ inputs:
   config-path:
     description: 'Path to the appsettings.json file'
     required: false
-    default: 'src/FeedSieve/Resources/appsettings.json'
+    default: 'src/FeedSieve/Resources/AppSettings.json'
   sentry-dsn:
     required: true
     description: 'Sentry DSN for error tracking'
