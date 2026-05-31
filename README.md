@@ -65,7 +65,7 @@ central-pkg-converter .
 The initial installation was done with:
 
 ```bash
-dotnet new tool-manifest
+dotnet new tool-manifest # and move the generated file to .config/dotnet-tools.json
 dotnet tool install Husky
 dotnet husky install
 dotnet husky add commit-msg -c "echo placeholder" # (it creates a file in the .husky/commit-msg which you need to edit)
