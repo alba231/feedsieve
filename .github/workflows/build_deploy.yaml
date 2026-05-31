@@ -43,6 +43,7 @@ env:
   CONFIGURATION: 'Release'
   TEST_PROJECT: 'tests/FeedSieve.Tests.Unit/FeedSieve.Tests.Unit.csproj'
   APP_PROJECT:  'src/FeedSieve/FeedSieve.csproj'
+  HUSKY: 0
 
 jobs:
   # ---------------------------------------------------------------------------
