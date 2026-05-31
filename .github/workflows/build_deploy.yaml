@@ -10,7 +10,7 @@ on:
       - '**/*.sln'
       - 'Directory.Packages.props'
       - 'Directory.Build.props'
-      - '.github/workflows/build_deploy.yml'
+      - '.github/workflows/build_deploy.yaml'
       - '.github/actions/inject-secrets/action.yaml'
   pull_request:
     branches: [main]
@@ -21,7 +21,7 @@ on:
       - '**/*.sln'
       - 'Directory.Packages.props'
       - 'Directory.Build.props'
-      - '.github/workflows/build_deploy.yml'
+      - '.github/workflows/build_deploy.yaml'
       - '.github/actions/inject-secrets/action.yaml'
   workflow_dispatch:
 
