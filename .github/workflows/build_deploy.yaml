@@ -226,7 +226,7 @@ jobs:
             -p:WindowsPackageType=None `
             -p:GenerateAppxPackageOnBuild=false `
             -p:SelfContained=true `
-            -p:RuntimeIdentifier=win10-x64 `
+            -p:RuntimeIdentifier=win-x64 `
             -p:PublishReadyToRun=true
 
       - name: Upload Windows artifact
@@ -234,6 +234,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: windows-build
-          path: src/FeedSieve/bin/${{ env.CONFIGURATION }}/net10.0-windows10.0.19041.0/win10-x64/publish/
+          path: src/FeedSieve/bin/${{ env.CONFIGURATION }}/net10.0-windows10.0.19041.0/win-x64/publish/
           retention-days: 14
           if-no-files-found: error
