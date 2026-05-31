@@ -1,8 +1,5 @@
 ﻿using CommunityToolkit.Maui;
-using FeedSieve.Core.Exceptions;
 using FeedSieve.Infra;
-using Microsoft.Extensions.Configuration;
-using Serilog;
 using Syncfusion.Maui.Toolkit.Hosting;
 
 
