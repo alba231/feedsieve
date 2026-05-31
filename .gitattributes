@@ -1,0 +1,19 @@
+# Normalize all text files to LF in the repo, auto-detect on checkout
+* text=auto
+
+# Shell scripts and git hooks must always be LF (they break with CRLF)
+.husky/* text eol=lf
+*.sh text eol=lf
+
+# Windows-specific scripts should stay CRLF
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+
+# Treat binary assets as binary (no EOL conversion, no diffing)
+*.png binary
+*.jpg binary
+*.ico binary
+*.pfx binary
+*.snk binary
+*.dll binary

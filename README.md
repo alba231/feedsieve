@@ -60,6 +60,20 @@ central-pkg-converter .
 
 - The `AppSettings.json` file contains shared configuration values and is placed in the `FeedSieve/Resources` folder to be accessible by all projects.
 
+
+### Husky.NET
+The initial installation was done with:
+
+```bash
+dotnet new tool-manifest
+dotnet tool install Husky
+dotnet husky install
+dotnet husky add commit-msg -c "echo placeholder" # (it creates a file in the .husky/commit-msg which you need to edit)
+```
+
+
+> You don't need to install it manually. It will be installed automatically on build.
+
 ### (Ignore for now) Infrastructure installation
 
 > **_Note_**: Due to Firebase API tier limitations the following steps are not used for now. All firebase resources are manually created and managed.
