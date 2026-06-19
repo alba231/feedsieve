@@ -1,3 +1,5 @@
+# Copilot Instructions
+
 ## Stack
 - .NET 9, C# 13
 - Angular (frontend)
@@ -13,3 +15,8 @@
 ## Error Handling
 - Use result types or custom exceptions — no swallowing exceptions silently
 - Validate at boundaries (controllers, public service methods); trust internals
+
+## Testing Guidelines
+- Use Name_StateUnderTest_Behavior test method names
+- Add Arrange/Act/Assert (AAA) comments with blank lines
+- Prefer FluentAssertions.BeEquivalentTo with anonymous objects when asserting multiple fields
