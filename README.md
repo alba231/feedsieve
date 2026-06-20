@@ -77,6 +77,28 @@ dotnet husky install
 dotnet husky add commit-msg -c "echo placeholder" # (it creates a file in the .husky/commit-msg which you need to edit)
 ```
 
+Then setup auto-install for everyone else (and CI, and your fresh clones):
+```xml
+<Project>
+  <PropertyGroup>
+    <HuskyRoot Condition="'$(HuskyRoot)' == ''">.</HuskyRoot>
+  </PropertyGroup>
+  <Target Name="Husky" AfterTargets="Restore" Condition="'$(HUSKY)' != 0"
+          Inputs="$(HuskyRoot)/.config/dotnet-tools.json"
+          Outputs="$(HuskyRoot)/.husky/_/install.stamp">
+    <Exec Command="dotnet tool restore" StandardOutputImportance="Low" StandardErrorImportance="High"/>
+    <Exec Command="dotnet husky install" StandardOutputImportance="Low" StandardErrorImportance="High" WorkingDirectory="$(HuskyRoot)" />
+  </Target>
+</Project>
+```
+
+Then it is very important to disable Husky in the CI. 
+Just add the following env variable to your CI pipeline config:
+```yaml
+  env:
+    HUSKY: 0
+```
+
 
 > You don't need to install it manually. It will be installed automatically on build.
 
