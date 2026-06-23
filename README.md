@@ -113,3 +113,7 @@ Just add the following env variable to your CI pipeline config:
 > - Apply infra (review plan first): `terraform plan` then `terraform apply`
 
 
+## Design
+
+### Figma
+https://www.figma.com/make/Ek9BScxFBY92y9ZMpgkxwc/FeedSieve?p=f&t=SlzpIXBD4x25NdtD-0
